@@ -32,10 +32,15 @@ setInterval(() => {
     likes.innerText ++;
 }, 3500);
 
-// btn.addEventListener("click", () => {
-//   let data = getJoke();
-//   printJoke(data);
-// });
+ document.addEventListener("keypress", () => {
+  let data = getJoke();
+   printJoke(data);
+ });
+
+document.addEventListener("click", () => {
+  let data = getJoke();
+   printJoke(data);
+ });
 
 function printJoke(data) {
   data.then((result) => {
