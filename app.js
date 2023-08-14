@@ -5,8 +5,6 @@ const btn = document.querySelector(".btn");
 let retweet = document.querySelector("#retweets");
 let likes = document.querySelector("#likes");
 
-
-
 async function getJoke() {
   let url = fetch(
     "https://official-joke-api.appspot.com/jokes/programming/random"
@@ -45,7 +43,7 @@ document.addEventListener("click", () => {
 function printJoke(data) {
   data.then((result) => {
     joke = result[0];
-    // console.log(joke);
+    console.log(joke);
     document.querySelector('img').src="https://i.pravatar.cc/150";
     jokeque.innerText = joke.setup;
     jokeans.innerText = joke.punchline;
